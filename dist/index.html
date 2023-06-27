@@ -29,11 +29,13 @@
             </div>
             <div class="w-3/6 hidden md:flex justify-between gap-3 items-center">
                 <div
-                    class="border border-gray dark:border-black1 rounded-full w-full hidden md:flex justify-between items-center overflow-hidden">
-                    <input type="text" placeholder="Search"
-                        class="w-full focus:outline-none px-2 bg-opacity-0 bg-white dark:text-white">
-                    <button><i
-                            class="fa-solid fa-magnifying-glass bg-lightGray dark:bg-black1 py-4 px-8 dark:text-white"></i></button>
+                    class="border border-gray dark:border-black1 group rounded-full w-full hidden md:flex justify-between items-center overflow-hidden">
+                    <div class="relative flex-grow ">
+                        <input type="text" placeholder="Search"
+                            class="w-full focus:outline-none peer pl-4 focus:pl-10 pr-2 bg-opacity-0 bg-white dark:text-white">
+                        <i class="fa-solid fa-magnifying-glass dark:text-white scale-0 absolute peer-focus:scale-100 left-3 top-1/2 -translate-y-1/2"></i>
+                    </div>
+                    <button><i class="fa-solid fa-magnifying-glass bg-lightGray dark:bg-black1 py-4 px-8 dark:text-white"></i></button>
                 </div>
                 <i class="fa-solid fa-microphone text-xl dark:text-white scale-0 md:scale-100 absolute md:static"></i>
             </div>
