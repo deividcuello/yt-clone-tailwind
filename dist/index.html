@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="font-roboto">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,303 +11,292 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+
 </head>
-<body>
-    <header class="sticky py-2 top-0 z-50 bg-white">
+
+<body class="dark:bg-black">
+    <header class="sticky pb-2 px-2 top-0 z-50 bg-white dark:bg-black">
         <nav class="container mx-auto py-5 flex items-center justify-between">
             <div class="flex items-center">
-                <a href="#"><i class="fa-solid fa-bars text-xl"></i></a>
-                <img src="./assets/yt_logo.png" class="w-28 mx-5">
+                <a href="#"><i class="fa-solid fa-bars text-xl dark:text-white"></i></a>
+                <div
+                    class=" mx-5 dark:mx-0 w-28 h-10 bg-contain bg-no-repeat bg-center bg-[url('./img/yt_logo.png')] dark:bg-[url('./img/yt_logo_dark.png')]">
+                </div>
             </div>
-            <div class="w-3/6 flex justify-between gap-3 items-center">
-                <div class="border border-gray rounded-full w-full flex justify-between items-center overflow-hidden">
-                    <input type="text" placeholder="Search" class="w-full focus:outline-none px-2">
-                    <button><i class="fa-solid fa-magnifying-glass bg-lightGray border-l border-gray py-4 px-8"></i></button>
+            <div class="w-3/6 hidden md:flex justify-between gap-3 items-center">
+                <div
+                    class="border border-gray dark:border-black1 rounded-full w-full hidden md:flex justify-between items-center overflow-hidden">
+                    <input type="text" placeholder="Search"
+                        class="w-full focus:outline-none px-2 bg-opacity-0 bg-white">
+                    <button><i
+                            class="fa-solid fa-magnifying-glass bg-lightGray dark:bg-black1 py-4 px-8 dark:text-white"></i></button>
+                </div>
+                <i class="fa-solid fa-microphone text-xl dark:text-white scale-0 md:scale-100 absolute md:static"></i>
             </div>
-            <i class="fa-solid fa-microphone text-xl"></i>
-            </div>
-            <div class="flex gap-5 items-center">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-                <button class="border border-blue rounded-full p-3 text-blue font-semibold"><i class="fa-solid fa-user pr-1"></i> Sign in</button>
+            <div class="flex gap-2 md:gap-5 items-center flex-grow md:flex-grow-0 justify-end">
+                <button class="static scale-100 md:absolute md:scale-0"><i
+                        class="fa-solid fa-magnifying-glass bg-lightGray dark:bg-black1 dark:text-white rounded-full p-4"></i></button>
+                <i class="fa-solid fa-ellipsis-vertical dark:text-white"></i>
+                <i class="fa-solid fa-microphone text-xl dark:text-white cale-100 md:absolute md:scale-0"></i>
+                <button class="border border-blue rounded-full p-3 text-blue font-semibold"><i
+                        class="fa-solid fa-user pr-1"></i> Sign in</button>
+                <button class="toggleDark"><i
+                        class="fa-solid fa-moon bg-lightGray dark:bg-black1 dark:text-white rounded-full p-4"></i></button>
             </div>
         </nav>
         <div>
-            <div class="container mx-auto pl-24 overflow-x-scroll whitespace-nowrap pb-2">
-                <a href="#" class="bg-black text-white text-xl py-1 px-2 rounded-md mx-2">All</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Music</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Bad bunny</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Mixes</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">React routers</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Live</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">6ix9ine</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Conversation</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Comedy</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">6ix9ine</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Conversation</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Comedy</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">6ix9ine</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Conversation</a>
-                <a href="#" class="bg-lightGray text-xl py-1 px-2 rounded-md mx-2">Comedy</a>
+            <div
+                class="categories container mx-auto pl-24 overflow-x-scroll whitespace-nowrap pt-2 pb-5 hidden sm:inline-block">
+                <a href="#"
+                    class="bg-black text-white dark:bg-white dark:text-black text-xl py-1 px-2 rounded-md mx-2">All</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Music</a>
+                <a href="#" class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Bad
+                    bunny</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Mixes</a>
+                <a href="#" class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">React
+                    routers</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Live</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">6ix9ine</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Conversation</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Comedy</a>
+                <a href="#" class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Peso
+                    Pluma</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Games</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Films</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">MrBeast</a>
+                <a href="#" class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">Karol
+                    G</a>
+                <a href="#"
+                    class="bg-lightGray dark:bg-black1 dark:text-white text-xl py-1 px-2 rounded-md mx-2">PewDiePie</a>
             </div>
         </div>
     </header>
 
-    <div class="fixed top-20 z-50 bg-white min-h-screen w-24">
+    <div class="fixed top-20 z-50 bg-white dark:bg-black min-h-screen w-24">
         <div>
-            <div class="flex flex-col justify-center items-center gap-2 px-1 py-5">
+            <div
+                class="flex flex-col justify-center items-center gap-2 px-1 py-2 rounded-tr-xl rounded-br-xl dark:text-white hover:bg-darkGray transition-all cursor-pointer text-white bg-red">
                 <i class="fa-solid fa-house text-lg"></i>
                 <a href="#" class="text-sm">Home</a>
             </div>
-            <div class="flex flex-col justify-center items-center gap-2 px-1 py-5">
-                <i class="fa-solid fa-house text-lg"></i>
+            <div
+                class="flex flex-col justify-center items-center gap-2 px-1 py-2 rounded-tr-xl rounded-br-xl dark:text-white hover:dark:bg-darkGray hover:bg-lightGray transition-all cursor-pointer mt-4">
+                <i class="fa-solid fa-arrow-up-short-wide text-xl"></i>
                 <a href="#" class="text-sm">Shorts</a>
             </div>
-            <div class="flex flex-col justify-center items-center gap-2 px-1 py-5">
-                <i class="fa-solid fa-house text-lg"></i>
+            <div
+                class="flex flex-col justify-center items-center gap-2 px-1 py-2 rounded-tr-xl rounded-br-xl dark:text-white hover:dark:bg-darkGray hover:bg-lightGray transition-all cursor-pointer mt-4">
+                <i class="fa-solid fa-users-rays text-xl"></i>
                 <a href="#" class="text-sm">Subscriptions</a>
             </div>
-            <div class="flex flex-col justify-center items-center gap-2 px-1 py-5">
-                <i class="fa-solid fa-house text-lg"></i>
+            <div
+                class="flex flex-col justify-center items-center gap-2 px-1 py-2 rounded-tr-xl rounded-br-xl dark:text-white hover:dark:bg-darkGray hover:bg-lightGray transition-all cursor-pointer mt-4">
+                <i class="fa-solid fa-book text-xs"></i>
                 <a href="#" class="text-sm">Library</a>
             </div>
-            <div class="flex flex-col justify-center items-center gap-2 px-1 py-5">
-                <i class="fa-solid fa-house text-lg"></i>
+            <div
+                class="flex flex-col justify-center items-center gap-2 px-1 py-2 rounded-tr-xl rounded-br-xl dark:text-white hover:dark:bg-darkGray hover:bg-lightGray transition-all cursor-pointer mt-4">
+                <i class="fa-solid fa-clock-rotate-left text-xl"></i>
                 <a href="#" class="text-sm">History</a>
             </div>
         </div>
     </div>
 
-    <div class="min-h-screen w-[calc(100%-86px)] mt-5 ml-[80px] px-6 pb-5">
-        <div class="grid grid-cols-2 gap-10">
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+    <div
+        class="flex jusutify-center min-h-screen w-[calc(100%-86px)] max-w-lg[1200px] mt-5 ml-[80px] px-8 lg:px-32 pb-5">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-10">
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video1.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">21:38</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel1.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">Tom & Jerry | Tom & Jerry in Full Screen | Classic Cartoon
+                            Compilation | WB Kids</span><br>
+                        <span class="dark:text-gray">WB Kids <i
+                                class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span class="dark:text-gray">421M views 1 year ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video2.webp" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">1:36:47</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel2.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">ARNOLD BUSINESS - Action Movie 2023 full movie English Action
+                            Movies</span><br>
+                        <span class="dark:text-gray">Mido HuSsein <i
+                                class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span class="dark:text-gray">107K views 2 days ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video3.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">8:18</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel3.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">Juan Soto, Fernando Tatis Jr., Manny Machado, Nelson Cruz, Gary
+                            Sanchez ...</span><br>
+                        <span class="dark:text-gray">Baseball1962</span>
+                        <br><span class="dark:text-gray">5.3K views 2 hours ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video4.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">2:59:29</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel4.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">MIX SALSA Y BACHATA DADDY YANKEE, MARC ANTONY, PRINCE
+                            ...</span><br>
+                        <span class="dark:text-gray">SUMMER HITS</span>
+                        <br><span class="dark:text-gray">12M views 2 years ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video5.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">1:13:37</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel5.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">TEKASHI 6IX9INE & YAILIN HABLAN AL MUNDO JUNTOS POR PRIMERA
+                            VEZ</span><br>
+                        <span class="dark:text-gray">Alofokeradioshow <i
+                                class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span class="dark:text-gray">4.1M views Streamed 8 days ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video6.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">2:48</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel6.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">KAROL G - WATATI (feat. Aldo Ranks) (From Barbie The Album)
+                            [Official Mus ...</span><br>
+                        <span class="dark:text-gray">KAROL G <i
+                                class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span class="dark:text-gray">11M views10 days ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video7.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">15:48</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel7.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">HELLUVA BOSS - QUEEN BEE // S1: Episode 8</span><br>
+                        <span class="dark:text-gray">Vivziepop <i
+                                class="fa-solid fa-check text-sm bg-gray rounded-full p-1 ml-2"></i></span>
+                        <br><span class="dark:text-gray">5.1M views 1 day ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video8.webp" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">40:08</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel8.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">La Santa Misa de hoy| XII Domingo del Tiempo Ordinario | 25-06-2023 | P. ...</span><br>
+                        <span class="dark:text-gray">Franciscanos de María - Magnificat tv</span>
+                        <br><span class="dark:text-gray">90K views 19 hours ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video9.jfif" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">14:03</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel9.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">Animation vs. Math</span><br>
+                        <span>Alan Becker <i
+                            class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span>5.4M views 1 day ago</span>
                     </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
+            <div class="hover:bg-lightGray hover:dark:bg-black1 rounded-2xl">
+                <div class="relative">
+                    <img src="./img/video10.jpg" class="w-full h-full object-cover rounded-2xl">
+                    <span class="absolute bottom-3 right-3 bg-black text-sm text-white rounded-md p-1">3:14</span>
                 </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
+                <div class="flex space-x-2 p-2">
+                    <img src="./img/channel10.jpg" class="w-10 h-10 rounded-full">
+                    <div class="dark:text-white">
+                        <span class="text-xl font-bold">YoungBoy Never Broke Again - I Need To Know [Official Music Video]</span><br>
+                        <span>SYoungBoy Never Broke Again <i
+                            class="fa-solid fa-check text-sm bg-gray dark:bg-darkGray rounded-full p-1 ml-2 dark:text-white"></i></span>
+                        <br><span>2.3M views 3 days ago</span>
                     </div>
-                </div>
-            </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
-                </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
-                </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
-                </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="relative rounded-2xl overflow-hidden">
-                    <img src="./assets/video.jpg" class="h-full w-full object-cover">
-                    <span class="text-white bg-black p-1 rounded-md absolute bottom-1 right-1">4:53:12</span>
-                </div>
-                <div class="flex gap-2 mt-3">
-                    <img src="./assets/channel.jpg" class="w-14 h-14 rounded-full">
-                    <div>
-                        <h2 class="font-bold text-xl">Build and Deploy an Online Multiplayer Web 3 NFT Card Game | Full Course</h2>
-                        <div class="mt-2">
-                            <h3 class="text-darkGray">JavaScript Mastery <i class="fa-solid fa-check bg-darkGray rounded-full text-lightGray p-[0.1rem] text-xs"></i></h3>
-                            <span class="text-darkGray">148K views 7 months ago</span>
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical mt-2 text-lg dark:text-white"></i>
                 </div>
             </div>
         </div>
+
+
+        </div>
     </div>
 
+    <script>
+        const toggleDark = document.querySelector('.toggleDark');
+        toggleDark.addEventListener('click', () => {
+            document.querySelector('html').classList.toggle('dark')
+        })
+    </script>
 
     <script src="https://kit.fontawesome.com/0e43870383.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

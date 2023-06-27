@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html.dark .categories::-webkit-scrollbar-track {
+    background: #222222;
+}
+
+.categories::-webkit-scrollbar {
+    height: 5px;
+}
+
+.categories::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background: #606060;
+    border-radius: 5px;
+    width: 20px !important;
+}
+
+.categories::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
